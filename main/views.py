@@ -1,0 +1,19 @@
+from django.shortcuts import render
+from django.core.files.storage import FileSystemStorage
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def home_view(request, *args, **kwargs):
+	path = os.path.join(BASE_DIR, 'main/static/main/skills-img')  # insert the path to your directory   
+	img_list = os.listdir(path)
+
+	return render(request, "main/index.html", {'images': img_list})
+
+
+def upload_view(request, *args, **kwargs):
+	if request.method == 'POST':
+		uploaded_image = request.FILES['image']
+		fs = FileSystemStorage()
+		fs.save(uploaded_image.name, uploaded_image)
+	return render(request, "main/upload.html", {})

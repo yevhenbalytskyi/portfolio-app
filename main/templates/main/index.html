@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'main/styles.css' %}">
+</head>
+
+<body>
+	<header>
+		<div id="social-media-links">
+			<a href="https://linkedin.com" target="_blank">
+				<img src="{% static 'main/social-media-img/linkedin.png' %}">
+				<img class="bw" src="{% static 'main/social-media-img/linkedin-bw.png' %}">
+			</a>
+			<br><br>
+			<a href="https://github.com/yevhenbalytskyi" target="_blank">
+				<img src="{% static 'main/social-media-img/github.png' %}">
+				<img class="bw" src="{% static 'main/social-media-img/github-bw.png' %}">
+			</a>
+			<br><br>
+			<a href="https://www.facebook.com/yevhen.balitskyi" target="_blank">
+				<img src="{% static 'main/social-media-img/facebook.png' %}">
+				<img class="bw" src="{% static 'main/social-media-img/facebook-bw.png' %}">
+			</a>
+		</div>
+		<img id="header-image" src="{% static 'main/header.jpg' %}">
+		<div id="minimalist-picture"> &lt / &gt_ </div>
+		<div id="my-name">Евгений Балицкий</div>
+		<div id="profession">начинающий программист</div>
+	
+	</header>
+
+	<div id="topnav">
+		  <a onclick="window.scrollTo(0, 0);">Главная</a>
+		  <a onclick="window.scrollTo(0, 790);">Навыки</a>
+		  <a onclick="window.scrollTo(0, 1590);">Проекты</a>
+		  <a href="#contact">Связатся</a>
+	</div>
+
+	<div id="about">
+		<img id="my-pic" src="{% static 'main/my-pic.png' %}" />
+		<div id="about-text">
+			<h1>Евгений Балицкий</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<a href="" id="learn-more-button">Узнать больше...</a>
+		</div>
+	</div>
+
+	<div id="skills">
+		<h1>НАВЫКИ</h1>
+		<div id="divider"></div>
+		<div id="skill-scroll">
+			{% for image in images %}
+				<div class="skill-div">
+					<img src='/static//main/skills-img/{{image}}' />
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div id="projects">
+		<h1>ПРОЕКТЫ</h1>
+		<div id="divider"></div>
+	</div>
+
+	<footer>
+	</footer>
+
+
+</body>
+
+</html>
