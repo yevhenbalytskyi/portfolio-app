@@ -247,6 +247,31 @@ body{
 	text-align: center;
 }
 
+.project{
+	float:left;
+	margin: 20px 6.528%;
+	width: 20%;
+	height: 310px;
+	border:2px solid black;
+}
+
+.project img{
+	height: 50%;
+	width: 100%;
+}
+
+.project p{
+	text-align: center;
+	margin: 45px 0px;
+}
+
+.project a{
+	display:block;
+	text-align:center;
+	float: left;
+	width: 50%;
+}
+
 
 
 
