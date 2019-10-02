@@ -18,15 +18,19 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.conf.urls import url
 
 from main.views import home_view, upload_view
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home/', home_view),
-    path('upload/', upload_view),
+    url('admin/', admin.site.urls),
+    url('home/', home_view),
+    url('upload/', upload_view),
 ]
+
+#urlpatterns = [
+#    url('', views.homepageview, name='home')
+#]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

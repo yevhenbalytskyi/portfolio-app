@@ -24,7 +24,7 @@ SECRET_KEY = 'gx=3*_ou!2p$&%!7bix6ffd-dr@521b%3jc9so*buvznby(bk&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -118,6 +118,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/javlaF/portfolio-app/static'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'main/static/main/skills-img')
 
