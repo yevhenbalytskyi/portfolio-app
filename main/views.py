@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
+from datetime import datetime
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -17,3 +19,10 @@ def upload_view(request, *args, **kwargs):
 		fs = FileSystemStorage()
 		fs.save(uploaded_image.name, uploaded_image)
 	return render(request, "main/upload.html", {})
+
+
+
+def time_view(request):
+	now = datetime.now()
+	current_time = now.strftime("%H:%M:%S")
+	return HttpResponse(current_time)

@@ -20,12 +20,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from main.views import home_view, upload_view
+from main.views import home_view, upload_view, time_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_view),
     path('upload/', upload_view),
+    path('time/', time_view, name="time"),
 ]
 
 if settings.DEBUG:
