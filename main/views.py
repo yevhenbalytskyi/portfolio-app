@@ -23,6 +23,5 @@ def upload_view(request, *args, **kwargs):
 
 
 def time_view(request):
-	now = datetime.now()
-	current_time = now.strftime("%H:%M:%S")
-	return HttpResponse(current_time)
+	if request.method == 'POST':
+		return render(request, "main/contact.html", {})

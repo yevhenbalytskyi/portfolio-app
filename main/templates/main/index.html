@@ -8,7 +8,6 @@
 </head>
 
 <body>
-	<form id="content_p" method="POST">{% csrf_token %}</form>
 	<header>
 		<div id="social-media-links">
 			<a href="https://linkedin.com" target="_blank">
@@ -37,9 +36,11 @@
 		  <a onclick="window.scrollTo(0, 0);">Главная</a>
 		  <a onclick="window.scrollTo(0, 790);">Навыки</a>
 		  <a onclick="window.scrollTo(0, 1590);">Проекты</a>
-		  <a href="#contact">Связатся</a>
+		  <a onclick="get_time()">Связатся</a>
 	</div>
 
+
+	<form id="content_p" method="POST">{% csrf_token %}</form>
 	<div id="about">
 		<img id="my-pic" src="{% static 'main/my-pic.png' %}" />
 		<div id="about-text">
@@ -93,7 +94,9 @@
 	</footer>
 
 <script type="text/javascript">
-window.setInterval(function() {
+
+function get_time(){
+	$("#about").remove();
 	$.ajax({
 		type: 'POST',
 		url: "{% url 'time' %}",
@@ -104,7 +107,7 @@ window.setInterval(function() {
 			$('#content_p').html(html);
 		}
 	});
-},1000);
+};
 
 function getCookie(cname) {
      var name = cname + "=";
