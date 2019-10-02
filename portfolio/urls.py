@@ -18,15 +18,16 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.conf.urls import url
 
 from main.views import home_view, upload_view, time_view
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home/', home_view),
-    path('upload/', upload_view),
-    path('time/', time_view, name="time"),
+    url('admin/', admin.site.urls),
+    url('home/', home_view),
+    url('', home_view),
+    url('upload/', upload_view),
+    url('time/', time_view, name="time"),
 ]
 
 if settings.DEBUG:
