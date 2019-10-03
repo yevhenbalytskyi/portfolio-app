@@ -26,6 +26,7 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     url('home/', home_view),
     url('upload/', upload_view),
+    url('time/', time_view, name="time"),
 ]
 
 #urlpatterns = [
