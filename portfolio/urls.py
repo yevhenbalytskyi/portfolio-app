@@ -25,7 +25,6 @@ from main.views import home_view, upload_view, time_view
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('home/', home_view),
-    url('', home_view),
     url('upload/', upload_view),
     url('time/', time_view, name="time"),
 ]

@@ -7,7 +7,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def home_view(request, *args, **kwargs):
-	path = os.path.join(BASE_DIR, 'main/static/main/skills-img')  # insert the path to your directory   
+	path = os.path.join(BASE_DIR, 'main/static/main/skills-img')    
 	img_list = os.listdir(path)
 
 	return render(request, "main/index.html", {'images': img_list})
