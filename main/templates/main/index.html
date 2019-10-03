@@ -3,6 +3,7 @@
 <html>
 <head>
 	<meta charset="utf8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'main/styles.css' %}">
 </head>
 
@@ -35,9 +36,11 @@
 		  <a onclick="window.scrollTo(0, 0);">Главная</a>
 		  <a onclick="window.scrollTo(0, 790);">Навыки</a>
 		  <a onclick="window.scrollTo(0, 1590);">Проекты</a>
-		  <a href="#contact">Связатся</a>
+		  <a onclick="get_time()">Связатся</a>
 	</div>
 
+
+	<form id="content_p" method="POST">{% csrf_token %}</form>
 	<div id="about">
 		<img id="my-pic" src="{% static 'main/my-pic.png' %}" />
 		<div id="about-text">
@@ -90,7 +93,55 @@
 	<footer>
 	</footer>
 
+<script type="text/javascript">
+
+function get_time(){
+	$("#about").remove();
+	$.ajax({
+		type: 'POST',
+		url: "{% url 'time' %}",
+		data: {
+			csrfmiddlewaretoken: getCookie('csrftoken')
+		},
+		success: function(html){
+			$('#content_p').html(html);
+		}
+	});
+};
+
+function getCookie(cname) {
+     var name = cname + "=";
+     var ca = document.cookie.split(';');
+     for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if(c.indexOf(name) == 0)
+           return c.substring(name.length,c.length);
+     }
+     return "";
+}
+
+</script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf.urls import url
 
-from main.views import home_view, upload_view
+from main.views import home_view, upload_view, time_view
 
 urlpatterns = [
     url('admin/', admin.site.urls),
