@@ -20,13 +20,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf.urls import url
 
-from main.views import home_view, upload_view, time_view
+from main.views import home_view, upload_view, time_view, mail_view
 
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('home/', home_view),
     url('upload/', upload_view),
     url('time/', time_view, name="time"),
+    url('mail/', mail_view, name="mail"),
 ]
 
 #urlpatterns = [

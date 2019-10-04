@@ -5,6 +5,7 @@
 	<meta charset="utf8">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'main/styles.css' %}">
+	<title>Евгений Балицкий</title>
 </head>
 
 <body>
@@ -28,25 +29,25 @@
 		<img id="header-image" src="{% static 'main/header.jpg' %}">
 		<div id="minimalist-picture"> &lt / &gt_ </div>
 		<div id="my-name">Евгений Балицкий</div>
-		<div id="profession">начинающий программист</div>
-	
+		<div id="profession">веб разработчик</div>
 	</header>
 
 	<div id="topnav">
-		  <a onclick="window.scrollTo(0, 0);">Главная</a>
+		  <a onclick="main_page();">Главная</a>
 		  <a onclick="window.scrollTo(0, 790);">Навыки</a>
-		  <a onclick="window.scrollTo(0, 1590);">Проекты</a>
-		  <a onclick="get_time()">Связатся</a>
+		  <a onclick="window.scrollTo(0, 2048);">Проекты</a>
+		  <a onclick="get_time();">Связатся</a>
 	</div>
 
 
 	<form id="content_p" method="POST">{% csrf_token %}</form>
+	<div id="append"></div>
 	<div id="about">
 		<img id="my-pic" src="{% static 'main/my-pic.png' %}" />
 		<div id="about-text">
 			<h1>Евгений Балицкий</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			<a href="" id="learn-more-button">Узнать больше...</a>
+			<button  id="learn-more-button">Узнать больше...</button>
 		</div>
 	</div>
 
@@ -70,56 +71,60 @@
 				<img src="{% static 'main/template.jpg' %}">
 				<p>Distinctive description of the project I made</p>
 				<div class="project-divider"></div>
-				<a href="">Source</a>
-				<a href="">Demo</a>
+				<button >Код</button>
+				<button >Демо</button>
 			</div>
 			<div class="project">
 				<img src="{% static 'main/template.jpg' %}">
 				<p>Distinctive description of the project I made</p>
 				<div class="project-divider"></div>
-				<a href="">Source</a>
-				<a href="">Demo</a>
+				<button >Код</button>
+				<button >Демо</button>
 			</div>
 			<div class="project">
 				<img src="{% static 'main/template.jpg' %}">
 				<p>Distinctive description of the project I made</p>
 				<div class="project-divider"></div>
-				<a href="">Source</a>
-				<a href="">Demo</a>
+				<button >Код</button>
+				<button >Демо</button>
 			</div>
 		</div>
 	</div>
 
-	<footer>
-	</footer>
-
 <script type="text/javascript">
 
-function get_time(){
-	$("#about").remove();
-	$.ajax({
-		type: 'POST',
-		url: "{% url 'time' %}",
-		data: {
-			csrfmiddlewaretoken: getCookie('csrftoken')
-		},
-		success: function(html){
-			$('#content_p').html(html);
-		}
-	});
-};
+var clone = $("#about").clone();
 
-function getCookie(cname) {
-     var name = cname + "=";
-     var ca = document.cookie.split(';');
-     for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if(c.indexOf(name) == 0)
-           return c.substring(name.length,c.length);
-     }
-     return "";
-}
+	function get_time(){
+		$("#about").remove();
+		$.ajax({
+			type: 'POST',
+			url: "{% url 'time' %}",
+			data: {
+				csrfmiddlewaretoken: getCookie('csrftoken')
+			},
+			success: function(html){
+				$('#content_p').html(html);
+			}
+		});
+	};
+
+	function main_page(){
+		$(".container").remove();
+		$("#append").append(clone); 
+	}
+
+	function getCookie(cname) {
+	     var name = cname + "=";
+	     var ca = document.cookie.split(';');
+	     for(var i=0; i<ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0)==' ') c = c.substring(1);
+	        if(c.indexOf(name) == 0)
+	           return c.substring(name.length,c.length);
+	     }
+	     return "";
+	}
 
 </script>
 
