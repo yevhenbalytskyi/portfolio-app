@@ -30,9 +30,5 @@ urlpatterns = [
     url('mail/', mail_view, name="mail"),
 ]
 
-#urlpatterns = [
-#    url('', views.homepageview, name='home')
-#]
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

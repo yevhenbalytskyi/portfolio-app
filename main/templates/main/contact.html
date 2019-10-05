@@ -8,19 +8,48 @@
   display:      block;
   float: left;
   margin-right:  auto;
-  margin-left: 100px;
+  margin-left: 5%;
   width: 40%;
   margin-top: 6px;
   margin-bottom: 16px;
   background-color: white;
   border: 1px solid #888;
   height: 335px;
+  overflow: scroll; 
+  white-space: nowrap;
+}
+
+#contact-info h3{
+  font-size: 20px;
+  margin-top: 17px;
+  margin-left: 20px;
+}
+
+#contact-info p{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 27px;
+  margin-left: 20px;
+}
+
+#contact-info li{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#contact-divider{
+  height: 2px;
+  width: 75%;
+  background-color: black;
+  margin-top: 20px;
+  margin-left: 20px;
+
 }
 
 input[type=text], select, textarea {
   display:      block;
   margin-left:  auto;
-  margin-right: 100px;
+  margin-right: 5%;
   width: 40%;
   padding: 12px;
   border: 1px solid #888;
@@ -32,7 +61,7 @@ input[type=submit] {
   background-color: rgb(39, 35, 61);
   display:      block;
   margin-left:  auto;
-  margin-right: 100px;
+  margin-right: 5%;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -45,19 +74,65 @@ input[type=submit] {
   height: 665px;
 }
 
+@media screen and (max-width: 600px) {
+  #contact-info{
+    display:      block;
+    margin-right:  14%;
+    margin-left: 14%;
+    width: 70%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color: white;
+    border: 1px solid #888;
+    height: 335px;
+    overflow: scroll; 
+    white-space: nowrap;
+  }
+
+  input[type=text], select, textarea {
+    display:      block;
+    margin-right:  14%;
+    margin-left: 14%;
+    width: 65%;
+    border: 1px solid #888;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  input[type=submit] {
+    background-color: rgb(39, 35, 61);
+    display:      block;
+    margin-right:  14%;
+    margin-left: 14%;
+    width: 70%;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .container {
+    padding: 20px;
+    padding-top: 65px;
+    height: 1065px;
+  }
+
+}
+
+
+
 </style>
 </head>
 <body>
 
 <div class="container">
   <div id="contact-info">
-    КОНТАКТНАЯ ИНФОРМАЦИЯ
-    <br><br>
-    E-mail: 
-    balya.evgenij@gmail.com
-    <br><br>
-    Телефон:
-    +380950158264
+    <h3>КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
+    <div id="contact-divider"></div>
+    <p>E-mail:</p> 
+    <li>balya.evgenij@gmail.com</li>
+    <p>Телефон:</p>
+    <li>+380950158264</li>
     <div></div>
   </div>
   <form action="/mail/" method="POST">{% csrf_token %}

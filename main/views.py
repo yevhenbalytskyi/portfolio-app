@@ -21,8 +21,6 @@ def upload_view(request, *args, **kwargs):
 		fs.save(uploaded_image.name, uploaded_image)
 	return render(request, "main/upload.html", {})
 
-
-
 def time_view(request):
 	if request.method == 'POST':
 		return render(request, "main/contact.html", {})
