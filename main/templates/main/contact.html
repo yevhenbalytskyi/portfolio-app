@@ -136,9 +136,9 @@ input[type=submit] {
     <div></div>
   </div>
   <form action="/mail/" method="POST">{% csrf_token %}
-    <input type="text" id="fname" name="name" placeholder="Name *">
+    <input type="text" id="fname" name="name" placeholder="Name *" required>
 
-    <input type="text" id="lname" name="email" placeholder="Email *">
+    <input type="text" id="lname" name="email" placeholder="Email *" required>
 
     <textarea id="subject" name="message" placeholder="Message" style="height:200px"></textarea>
 

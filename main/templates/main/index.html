@@ -92,6 +92,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal"><!-- Place at bottom of page --></div>
 
 <script type="text/javascript">
 
@@ -130,6 +131,13 @@ var clone = $("#about").clone();
 	     }
 	     return "";
 	}
+
+	$body = $("body");
+
+	$(document).on({
+	    ajaxStart: function() { $body.addClass("loading");    },
+	     ajaxStop: function() { $body.removeClass("loading"); }    
+	});
 
 </script>
 
