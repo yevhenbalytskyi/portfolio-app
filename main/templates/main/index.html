@@ -30,8 +30,8 @@
 
 	<div id="topnav">
 		  <a onclick="window.scrollTo(0, 0); main_page();">Главная</a>
-		  <a onclick="window.scrollTo(0, 790);">Навыки</a>
-		  <a onclick="window.scrollTo(0, 2048);">Проекты</a>
+		  <a onclick="$(window).scrollTop($('#skills').offset().top);">Навыки</a>
+		  <a onclick="$(window).scrollTop($('#projects').offset().top);">Проекты</a>
 		  <a onclick="window.scrollTo(0, 0); get_time();">Связатся</a>
 	</div>
 
@@ -42,8 +42,7 @@
 		<img id="my-pic" src="{% static 'main/my-pic.png' %}" />
 		<div id="about-text">
 			<h1>Евгений Балицкий</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			<button  id="learn-more-button">Узнать больше...</button>
+			<p>Я студент, изучающий программирование, со страстью к компьютерным наукам и желанием учится и становится лучше.</p>
 		</div>
 	</div>
 
@@ -71,21 +70,21 @@
 		<div id="project-container">
 			<div class="project">
 				<img src="{% static 'main/template.jpg' %}">
-				<p>Distinctive description of the project I made</p>
+				<p>Описание проекта</p>
 				<div class="project-divider"></div>
 				<button >Код</button>
 				<button >Демо</button>
 			</div>
 			<div class="project">
 				<img src="{% static 'main/template.jpg' %}">
-				<p>Distinctive description of the project I made</p>
+				<p>Описание проекта</p>
 				<div class="project-divider"></div>
 				<button >Код</button>
 				<button >Демо</button>
 			</div>
 			<div class="project">
 				<img src="{% static 'main/template.jpg' %}">
-				<p>Distinctive description of the project I made</p>
+				<p>Описание проекта</p>
 				<div class="project-divider"></div>
 				<button >Код</button>
 				<button >Демо</button>
@@ -99,7 +98,6 @@
 var clone = $("#about").clone();
 
 	function get_time(){
-		$("#about").remove();
 		$.ajax({
 			type: 'POST',
 			url: "{% url 'time' %}",
@@ -108,6 +106,7 @@ var clone = $("#about").clone();
 			},
 			success: function(html){
 				$('#content_p').html(html);
+				$("#about").remove();
 			}
 		});
 	};
@@ -118,7 +117,7 @@ var clone = $("#about").clone();
 		} else {
 			$("#append").append(clone);
 		}
-	}
+	};
 
 	function getCookie(cname) {
 	     var name = cname + "=";
@@ -130,7 +129,7 @@ var clone = $("#about").clone();
 	           return c.substring(name.length,c.length);
 	     }
 	     return "";
-	}
+	};
 
 	$body = $("body");
 

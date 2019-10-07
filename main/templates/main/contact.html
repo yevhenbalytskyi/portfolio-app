@@ -136,13 +136,13 @@ input[type=submit] {
     <div></div>
   </div>
   <form action="/mail/" method="POST">{% csrf_token %}
-    <input type="text" id="fname" name="name" placeholder="Name *" required>
+    <input type="text" id="fname" name="name" placeholder="Имя *" required>
 
-    <input type="text" id="lname" name="email" placeholder="Email *" required>
+    <input type="text" id="lname" name="email" placeholder="E-mail *" required>
 
-    <textarea id="subject" name="message" placeholder="Message" style="height:200px"></textarea>
+    <textarea id="subject" name="message" placeholder="Сообщение" style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Подтвердить">
   </form>
 </div>
 

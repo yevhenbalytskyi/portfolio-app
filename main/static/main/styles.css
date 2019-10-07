@@ -38,6 +38,7 @@ body{
 }
 
 #minimalist-picture{
+	margin: 0 20%;
 	font-size: 45px;
 	position: relative;
 	top:-260px;
@@ -48,6 +49,7 @@ body{
 }
 
 #my-name{
+	margin: 0 20%;
 	position: relative;
 	top:-230px;
 	text-align: center;
@@ -63,6 +65,7 @@ body{
 }
 
 #profession{
+	margin: 0 20%;
 	position: relative;
 	top:-205px;
 	text-align: center;
@@ -149,7 +152,7 @@ body{
 		background-color: white;
 		width: auto;
 		height: 370px;
-		margin: 20px 5%;
+		margin: 20px 15%;
 		border: 9px ridge #434343;
 		border-radius: 50px;
 		overflow: scroll;
@@ -164,15 +167,17 @@ body{
 #about-text h1{
 	font-family: "Times New Roman", Times, serif;
 	font-size: 35px;
-	margin-top: 30px;
+	margin-top: 40px;
 	margin-left: 15px;
 	font-style: italic;
 	text-decoration: underline solid;
 }
 
 #about-text p{
-	margin-top: 15px;
+	margin-top: 70px;
 	margin-left: 15px;
+	margin: 70px 10px;
+	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 22px;
 	word-spacing: 4px;
