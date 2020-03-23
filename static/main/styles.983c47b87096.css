@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	background: url("/static/main/background2.5f9d9d07122f.jpg") 0px 0 fixed;
+	height: 1000px;
+}
+
+#header-image {
+	height: 290px;
+    width: 100%;
+}
+
+#social-media-links{
+	position: absolute;
+	right: 50px;
+	top: 15px;
+}
+
+#social-media-links img{
+	position: absolute;
+	height: 35px;
+	width: 35px;
+}
+
+.bw{
+	transition:0.3s;
+}
+
+.bw:hover {
+	opacity: 0;
+}
+
+#minimalist-picture{
+	margin: 0 20%;
+	font-size: 45px;
+	position: relative;
+	top:-260px;
+	text-align: center;
+	color: #434343;
+	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+	user-select: none;
+}
+
+#my-name{
+	margin: 0 20%;
+	position: relative;
+	top:-230px;
+	text-align: center;
+	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 50px;
+	word-spacing: 6px;
+	color: #434343;
+	font-weight: 400;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: italic;
+}
+
+#profession{
+	margin: 0 20%;
+	position: relative;
+	top:-205px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	word-spacing: 6px;
+	color: #434343;
+	font-weight: 400;
+	text-decoration: none solid rgb(68, 68, 68);
+	text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+#topnav {
+	position: sticky;
+	background-color: #434343;
+	overflow: hidden;
+	margin-top: -137px;
+}
+
+@media screen and (max-width: 386px) {
+	#topnav {
+		position: sticky;
+		background-color: #434343;
+		overflow: hidden;
+		margin-top: -195px;
+	}
+}
+
+#topnav a {
+
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  width: 25%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+#topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#about{
+	height: 700px;
+	padding-top: 50px;
+}
+
+#my-pic{
+	min-width: 290px;
+	width: auto;
+	height: 375px;
+	margin-left: 11%;
+	border: 9px ridge #434343;
+	border-radius: 50px;
+}
+
+#about-text{
+	background-color: white;
+	float: right;
+	height: 375px;
+	width: 400px;
+	margin-right: 11%;
+	border: 9px ridge #434343;
+	border-radius: 50px;
+}
+
+
+@media screen and (max-width: 936px) {
+	#my-pic{
+		min-width: 290px;
+		width: auto;
+		height: 375px;
+		display:block;
+    	margin:auto;
+		border: 9px ridge #434343;
+		border-radius: 50px;
+	}
+
+	#about-text{
+		background-color: white;
+		width: auto;
+		height: 370px;
+		margin: 20px 15%;
+		border: 9px ridge #434343;
+		border-radius: 50px;
+		overflow: scroll;
+	}
+
+	#about{
+		height: 1100px;
+		padding-top: 30px;
+	}
+}
+
+#about-text h1{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 35px;
+	margin-top: 40px;
+	margin-left: 15px;
+	font-style: italic;
+	text-decoration: underline solid;
+}
+
+#about-text p{
+	margin-top: 70px;
+	margin-left: 15px;
+	margin: 70px 10px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	word-spacing: 4px;
+}
+
+#learn-more-button {
+	display:block;
+    margin: 40px auto;
+	background-color:transparent;
+	border:3px solid #555555;
+	cursor:pointer;
+	color:#555555;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+#learn-more-button:hover {
+	background-color:transparent;
+}
+#learn-more-button:active {
+	position:relative;
+	top:1px;
+}
+
+
+#skills{
+	background-color: #DFCFBB;
+	margin-top: -250px;
+	width: 100%;
+	height: 800px;
+}
+
+#skills h1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	padding-top: 25px;
+	text-align: center;
+}
+
+#divider{
+	background-color: black;
+	height: 2px;
+	margin-top: 10px;
+	margin-left:40%;
+	margin-right:40%;
+}
+
+#skill-scroll{
+	margin:50px 7%;
+  	padding: 30px 30px;
+    display: flex;
+	overflow-x: scroll; 
+}
+
+.skill-div{
+	height: 270px;
+	width: 225px;
+	margin-right: -90px;
+  	vertical-align: middle;
+	background-color: white;
+	border-style: solid;
+  	border-width: 2px;
+  	border-color: black;
+	border-radius: 70px;
+	float: left;
+	transition: 0.5s;
+
+	//-webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+	//box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+	-webkit-box-shadow: 0px 15px 14px 1px rgba(0,0,0,0.85);
+	-moz-box-shadow: 0px 15px 14px 1px rgba(0,0,0,0.85);
+	box-shadow: 0px 15px 14px 1px rgba(0,0,0,0.7);
+}
+
+.skill-div:hover{
+	margin-top: -20px;
+	margin-right: -25px;
+}
+
+.skill-div img{
+	height: 200px;
+	width: 200px;
+	margin-left: 8px;
+	margin-top: 35px;
+}
+
+#projects{
+	padding-top: 35px;
+	background-color: white;
+	margin-top: -250px;
+	width: 100%;
+	height: 480px;
+}
+
+#projects h1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+.project{
+	float:left;
+	margin: 35px 6%;
+	padding-bottom: 20px;
+	width: 20%;
+	height: 40%;
+	border:1px solid rgba(180,180,180,1);
+}
+
+@media screen and (max-width: 900px) {
+	#projects{
+		padding-top: 35px;
+		background-color: white;
+		width: 100%;
+		height: 1900px;
+	}
+
+	.project{
+		display:block;
+		margin: 20px 14%;
+		width: 70%;
+		padding-bottom: 20px;
+		border:1px solid rgba(180,180,180,1);
+	}
+}
+
+.project img{
+	height: 50%;
+	width: 100%;
+}
+
+.project p{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin: 30px 30px;
+	color: rgba(107,107,107,1);
+  	overflow: scroll; 
+  	white-space: nowrap;
+}
+
+.project-divider{
+	margin: 0 auto;
+	width: 80%;
+	height: 1px;
+	background-color: rgba(180,180,180,1);
+}
+
+.project button{
+	display:block;
+	float: left;
+
+	background-color:transparent;
+	border: 2px solid rgba(127,127,127,1);
+	color: rgba(127,127,127,1);
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size: 14px;
+	font-weight:bold;
+	margin: 20px 12.7%;
+	width: 24%;
+	padding: 10px 0px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+
+
+
+
