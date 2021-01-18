@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'main/styles.css' %}">
-	<title>Евгений Балицкий</title>
+	<title>Yevhen Balytskyi</title>
 </head>
 
 <body>
@@ -24,15 +24,15 @@
 		</div>
 		<img id="header-image" src="{% static 'main/header.jpg' %}">
 		<div id="minimalist-picture"> &lt / &gt_ </div>
-		<div id="my-name">Евгений Балицкий</div>
-		<div id="profession">веб разработчик</div>
+		<div id="my-name">Yevhen Balytskyi</div>
+		<div id="profession">web developer</div>
 	</header>
 
 	<div id="topnav">
-		  <a onclick="window.scrollTo(0, 0); main_page();">Главная</a>
-		  <a onclick="$(window).scrollTop($('#skills').offset().top);">Навыки</a>
-		  <a onclick="$(window).scrollTop($('#projects').offset().top);">Проекты</a>
-		  <a onclick="window.scrollTo(0, 0); get_time();">Связатся</a>
+		  <a onclick="window.scrollTo(0, 0); main_page();">Main</a>
+		  <a onclick="$(window).scrollTop($('#skills').offset().top);">Skills</a>
+		  <a onclick="$(window).scrollTop($('#projects').offset().top);">Projekts</a>
+		  <a onclick="window.scrollTo(0, 0); get_time();">Contact</a>
 	</div>
 
 
@@ -41,15 +41,15 @@
 	<div id="about">
 		<img id="my-pic" src="{% static 'main/my-pic.png' %}" />
 		<div id="about-text">
-			<h1>Евгений Балицкий</h1>
-			<p>Я студент, изучающий программирование, со страстью к компьютерным наукам и желанием учится и становится лучше.</p>
+			<h1>Yevhen Balytskyi</h1>
+			<p>I'm a student, who studies Programming with a passion for Computer Science and a desire to learn and get better</p>
 		</div>
 	</div>
 
 
 
 	<div id="skills">
-		<h1>НАВЫКИ</h1>
+		<h1>SKILLS</h1>
 		<div id="divider"></div>
 
 		<div id="skill-scroll">
@@ -65,29 +65,29 @@
 
 
 	<div id="projects">
-		<h1>ПРОЕКТЫ</h1>
+		<h1>Projects</h1>
 		<div id="divider"></div>
 		<div id="project-container">
 			<div class="project">
 				<img src="{% static 'main/typeracer.png' %}">
-				<p>Описание проекта</p>
+				<p>Project description</p>
 				<div class="project-divider"></div>
-				<button onclick="location.href='https://github.com/yevhenbalytskyi/typeracer-clone';">Код</button>
-				<button onclick="location.href='https://powerful-meadow-92522.herokuapp.com/';">Демо</button>
+				<button onclick="location.href='https://github.com/yevhenbalytskyi/typeracer-clone';">Code</button>
+				<button onclick="location.href='https://powerful-meadow-92522.herokuapp.com/';">Demo</button>
 			</div>
 			<div class="project">
 				<img src="{% static 'main/template.jpg' %}">
-				<p>Описание проекта</p>
+				<p>Project description</p>
 				<div class="project-divider"></div>
-				<button >Код</button>
-				<button >Демо</button>
+				<button >Code</button>
+				<button >Demo</button>
 			</div>
 			<div class="project">
 				<img src="{% static 'main/template.jpg' %}">
-				<p>Описание проекта</p>
+				<p>Project description</p>
 				<div class="project-divider"></div>
-				<button >Код</button>
-				<button >Демо</button>
+				<button >Code</button>
+				<button >Demo</button>
 			</div>
 		</div>
 	</div>
